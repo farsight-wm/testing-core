@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">interface</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">farsightwm.testing.control</value>
+  <value name="is_public">false</value>
+  <value name="shared">CnByaXZhdGUgc3RhdGljIEFycmF5TGlzdDxJbnZva2VDaGFpblByb2Nlc3Nvcj4gZ2V0UHJvY2Vz
+c29ycygpIHRocm93cyBTZXJ2aWNlRXhjZXB0aW9uIHsKCUFycmF5TGlzdDxJbnZva2VDaGFpblBy
+b2Nlc3Nvcj4gcHJvY2Vzc29ycyA9IG51bGw7CglJbnZva2VNYW5hZ2VyIGludm9rZU1hbmFnZXIg
+PSBJbnZva2VNYW5hZ2VyLmdldERlZmF1bHQoKTsKCXRyeSB7CgkJRmllbGQgX3Byb2Nlc3NvcnMg
+PSBJbnZva2VNYW5hZ2VyLmNsYXNzLmdldERlY2xhcmVkRmllbGQoIl9wcm9jZXNzb3JzIik7CgkJ
+X3Byb2Nlc3NvcnMuc2V0QWNjZXNzaWJsZSh0cnVlKTsKCQlwcm9jZXNzb3JzID0gKEFycmF5TGlz
+dDxJbnZva2VDaGFpblByb2Nlc3Nvcj4pIF9wcm9jZXNzb3JzLmdldChpbnZva2VNYW5hZ2VyKTsK
+CX0gY2F0Y2ggKEV4Y2VwdGlvbiBlKSB7CgkJdGhyb3cgbmV3IFNlcnZpY2VFeGNlcHRpb24oZSk7
+Cgl9CglyZXR1cm4gcHJvY2Vzc29yczsKfQoKcHJpdmF0ZSBzdGF0aWMgdm9pZCBpbnN0YWxsUHJv
+Y2Vzc29yKCkgdGhyb3dzIFNlcnZpY2VFeGNlcHRpb24gewoJRmFyc2lnaHRDaGFpblByb2Nlc3Nv
+ciBpbnN0YW5jZSA9IEZhcnNpZ2h0Q2hhaW5Qcm9jZXNzb3IuZ2V0SW5zdGFuY2UoKTsKCWlmKGlu
+c3RhbmNlID09IG51bGwpIHsKCQkvL2NyZWF0ZSB3aXRoIGRlZmF1bHQgY29uc3R1cmN0b3IKCQlp
+bnN0YW5jZSA9IG5ldyBGYXJzaWdodENoYWluUHJvY2Vzc29yKCk7Cgl9CgkKCUZhcnNpZ2h0Q2hh
+aW5Qcm9jZXNzb3IuaW5zdGFsbCgpOwp9Cgpwcml2YXRlIHN0YXRpYyB2b2lkIHVuaW5zdGFsbFBy
+b2Nlc3NvcigpIHRocm93cyBTZXJ2aWNlRXhjZXB0aW9uIHsKCUZhcnNpZ2h0Q2hhaW5Qcm9jZXNz
+b3IudW5pbnN0YWxsKCk7Cn0KCnByaXZhdGUgc3RhdGljIElEYXRhIGNoZWNrUHJvY2Vzc29yKCkg
+dGhyb3dzIFNlcnZpY2VFeGNlcHRpb24gewoJSURhdGFNYXAgcCA9IG5ldyBJRGF0YU1hcCgpOwoJ
+Ly9maW5kIGluc3RhbGxlZCBwcm9jZXNzb3IKCUludm9rZUNoYWluUHJvY2Vzc29yIHByb2MgPSBu
+dWxsOwoJaW50IGluc3RhbmNlcyA9IDA7CglTdHJpbmcgcHJvY05hbWUgPSBGYXJzaWdodENoYWlu
+UHJvY2Vzc29yLmNsYXNzLmdldENhbm9uaWNhbE5hbWUoKTsKCWZvcihJbnZva2VDaGFpblByb2Nl
+c3NvciBwcm9jZXNzb3I6IGdldFByb2Nlc3NvcnMoKSkgewoJCWlmKHByb2Nlc3Nvci5nZXRDbGFz
+cygpLmdldENhbm9uaWNhbE5hbWUoKS5lcXVhbHMocHJvY05hbWUpKSB7CgkJCXByb2MgPSBwcm9j
+ZXNzb3I7CgkJCWluc3RhbmNlcysrOwoJCX0KCX0KCQoJCglGYXJzaWdodENoYWluUHJvY2Vzc29y
+IGRlZmF1bHRJbm5zdGFuY2UgPSBGYXJzaWdodENoYWluUHJvY2Vzc29yLmdldEluc3RhbmNlKCk7
+CgkKCS8vYW5hbHlzZQoJCglwLnB1dCgiaW5zdGFuY2UiLCBkZWZhdWx0SW5uc3RhbmNlID09IG51
+bGwgPyAibm90LWZvdW5kIiA6ICJmb3VuZCIpOwoJCglpZihkZWZhdWx0SW5uc3RhbmNlICE9IG51
+bGwgJiYgaW5zdGFuY2VzID09IDEpIHsKCQlwLnB1dCgiaW5zdGFuY2UtbWF0Y2gtY2hhaW4iLCBk
+ZWZhdWx0SW5uc3RhbmNlID09IHByb2MpOwoJfQoJCgkKCWlmKGluc3RhbmNlcyA9PSAwKSB7CgkJ
+cC5wdXQoImluc3RhbGxlZCIsICJmYWxzZSIpOwoJfSBlbHNlIGlmKGluc3RhbmNlcyA9PSAxKSB7
+CgkJcC5wdXQoImluc3RhbGxlZCIsICJ0cnVlIik7CgkJCgkJCgl9IGVsc2UgewoJCXAucHV0KCJp
+bnN0YWxsZWQiLCAidHJ1ZSIpOwoJCXAucHV0KCJpbnN0YW5jZXMiLCBpbnN0YW5jZXMpOwoJCXAu
+cHV0KCJtZXNzYWdlIiwgIldhcm5pbmc6IG11bHRpcGxlIGluc3RhbmNlcyBpbiBjaGFpbiBmb3Vu
+ZCEiKTsKCX0KCQoJcmV0dXJuIHAuZ2V0SURhdGEoKTsKfQoKCgoKCgk=</value>
+  <value name="encodeutf8">true</value>
+  <value name="extends"></value>
+  <array name="implements" type="value" depth="1">
+  </array>
+  <array name="imports" type="value" depth="1">
+    <value>com.wm.app.b2b.server.invoke.InvokeChainProcessor</value>
+    <value>com.wm.app.b2b.server.invoke.InvokeManager</value>
+    <value>java.io.IOException</value>
+    <value>java.lang.reflect.Field</value>
+    <value>java.net.URL</value>
+    <value>java.util.ArrayList</value>
+    <value>java.util.Enumeration</value>
+    <value>java.util.Map.Entry</value>
+    <value>java.util.jar.Attributes</value>
+    <value>java.util.jar.Manifest</value>
+    <value>com.softwareag.util.IDataMap</value>
+    <value>farsight.testing.core.chainprocessor.FarsightChainProcessor</value>
+    <value>farsight.testing.core.flow.MockManager</value>
+    <value>farsight.utils.ManifestUtils</value>
+  </array>
+</Values>

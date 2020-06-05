@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">interface</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">farsightwm.testing.util.trace</value>
+  <value name="is_public">false</value>
+  <value name="shared">Cgk=</value>
+  <value name="encodeutf8">true</value>
+  <value name="extends"></value>
+  <array name="implements" type="value" depth="1">
+  </array>
+  <array name="imports" type="value" depth="1">
+    <value>com.wm.lang.ns.NSName</value>
+    <value>java.io.BufferedReader</value>
+    <value>java.io.IOException</value>
+    <value>java.io.PrintStream</value>
+    <value>java.io.StringReader</value>
+    <value>java.io.StringWriter</value>
+    <value>java.util.Collection</value>
+    <value>java.util.LinkedHashMap</value>
+    <value>java.util.LinkedList</value>
+    <value>java.util.Stack</value>
+    <value>com.softwareag.util.IDataMap</value>
+    <value>farsight.testing.core.chainprocessor.FarsightChainProcessor</value>
+    <value>farsight.testing.core.interceptor.trace.TextReport</value>
+    <value>farsight.testing.core.interceptor.trace.TraceInterceptor</value>
+    <value>farsight.testing.core.interceptor.trace.TraceReport</value>
+    <value>farsight.testing.core.interceptor.trace.TraceInterceptor.Trace</value>
+    <value>farsight.testing.core.interceptor.trace.TraceInterceptor.TraceItem</value>
+  </array>
+</Values>

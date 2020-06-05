@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="scenario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="scope" minOccurs="0"/>
+        <xs:element ref="given"/>
+        <xs:element ref="when" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="scope">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element name="global"/>
+        <xs:element name="session"/>
+        <xs:element name="user">
+          <xs:complexType>
+            <xs:complexContent>
+              <xs:restriction base="xs:anyType">
+                <xs:attribute name="username" type="xs:string"/>
+              </xs:restriction>
+            </xs:complexContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="given">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="service"/>
+        <xs:element ref="when" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+  <xs:element name="service">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute ref="intercepted" default="invoke"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+
+  <xs:element name="then">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="return" maxOccurs="unbounded"/>
+        <xs:element ref="pipelineCapture"/>
+        <xs:element ref="assert"/>
+        <xs:element ref="throw"/>
+      </xs:choice>
+      <xs:attribute name="dispatch" default="sequential">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="random" />
+            <xs:enumeration value="sequential" />
+          </xs:restriction>
+        </xs:simpleType>        
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="when">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="then" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required"/>
+      <xs:attribute name="condition"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="return" type="xs:string"/>
+  <xs:element name="throw" type="xs:string"/>
+  <xs:element name="pipelineCapture" type="xs:string"/>
+  
+  <xs:element name="assert">
+    <xs:complexType>
+      <xs:attribute name="id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:attribute name="intercepted">
+    <xs:simpleType>
+      <xs:restriction base="xs:normalizedString">
+        <xs:enumeration value="before"/>
+        <xs:enumeration value="invoke"/>
+        <xs:enumeration value="after"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+</xs:schema>

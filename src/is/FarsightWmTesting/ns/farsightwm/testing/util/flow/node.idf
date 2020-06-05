@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">interface</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">farsightwm.testing.util.flow</value>
+  <value name="is_public">false</value>
+  <value name="shared">CnByaXZhdGUgc3RhdGljIHZvaWQgY2hlY2tTZXJ2aWNlQXZhaWxhYmxlKFN0cmluZyBuYW1lc3Bh
+Y2UsIFN0cmluZyBzZXJ2aWNlKSB0aHJvd3MgU2VydmljZUV4Y2VwdGlvbiB7Cgl0cnkgewoJCU5h
+bWVzcGFjZS5jdXJyZW50KCkuZ2V0Tm9kZShuYW1lc3BhY2UgKyAiOiIgKyBzZXJ2aWNlKS5nZXRQ
+YWNrYWdlKCkuZ2V0TmFtZSgpOwoJfQoJY2F0Y2ggKEV4Y2VwdGlvbiBlKSB7CgkJdGhyb3cgbmV3
+IFNlcnZpY2VFeGNlcHRpb24oIlNlcnZpY2UgY291bGQgbm90IGJlIGZvdW5kOiAiICsgbmFtZXNw
+YWNlICsgIjoiICsgc2VydmljZSk7Cgl9Cn0KCQ==</value>
+  <value name="encodeutf8">true</value>
+  <value name="extends"></value>
+  <array name="implements" type="value" depth="1">
+  </array>
+  <array name="imports" type="value" depth="1">
+    <value>com.wm.app.b2b.server.ns.Namespace</value>
+    <value>com.wm.lang.xml.Document</value>
+    <value>com.wm.util.coder.IDataXMLCoder</value>
+    <value>com.wm.util.coder.XMLCoderWrapper</value>
+    <value>java.io.ByteArrayInputStream</value>
+    <value>java.io.IOException</value>
+    <value>java.io.InputStream</value>
+  </array>
+</Values>
