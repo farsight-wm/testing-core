@@ -3,23 +3,31 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>testing-core</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
-	<packaging>jar</packaging>
-
 	<parent>
 		<groupId>farsight-wm</groupId>
 		<artifactId>parent</artifactId>
 		<version>10.5.0</version>
 		<relativePath>../parent/pom.xml</relativePath>
 	</parent>
+	<artifactId>testing-core</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
-	<name>farsight-wm-testing-core</name>
+	<name>farsight-wm-testing-jbehave</name>
+	<description>Testing for webMethod IntegrationServer assets (based upon: upstream project from https://github.com/wmaop/)</description>
+	<url>https://github.com/farsight-wm/testing-core</url>
 
+	<issueManagement>
+		<url>https://github.com/farsight-wm/parent/testing-core</url>
+		<system>GitHub.com</system>
+	</issueManagement>
 
-	<description>
-		Modified Version from the upstream project https://github.com/wmaop/wm-aop/
-	</description>
+	<scm>
+		<url>https://github.com/farsight-wm/testing-core</url>
+		<connection>scm:git:https://github.com/farsight-wm/testing-core.git</connection>
+		<developerConnection>scm:git:https://github.com/farsight-wm/testing-core.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 
 	<licenses>
 		<license>
@@ -31,17 +39,17 @@
 
 	<developers>
 		<developer>
+			<name>Cornelius Wicke</name>
+			<url>https://www.xing.com/profile/Cornelius_Wicke</url>
+		</developer>
+		<developer>
 			<name>Richard Tomlinson</name>
 			<url>https://uk.linkedin.com/in/richard-tomlinson-b7b6581</url>
 		</developer>
 	</developers>
 
 	<properties>
-		<wm-aop-util.version>2.1.0-SNAPSHOT</wm-aop-util.version>
-
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jaxb.version>2.2.7</jaxb.version> <!-- Must match jaxb2-maven-plugin dep version -->
-		<commons-logging.version>1.1.1</commons-logging.version> <!-- JEXL version for exclusion -->
 		<apache.axis2.version>1.6.2</apache.axis2.version>
 		<javax.mail.version>1.4.4</javax.mail.version>
 		<maven.javadoc.skip>true</maven.javadoc.skip>
@@ -51,7 +59,9 @@
 		<dependency>
 			<groupId>farsight-wm</groupId>
 			<artifactId>testing-utils</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
+		
 		<!-- webMethods server JARs -->
 		<dependency>
 			<groupId>com.softwareag.webmethods</groupId>
@@ -75,7 +85,6 @@
 			<version>${webMethods.version}</version>
 			<scope>provided</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>com.softwareag.webmethods.wsstack</groupId>
 			<artifactId>client-api</artifactId>
@@ -121,7 +130,6 @@
 		</dependency>
 
 		<!-- Build JARs -->
-
 		<dependency>
 			<groupId>com.sun.xml.bind</groupId>
 			<artifactId>jaxb-impl</artifactId>
@@ -130,7 +138,6 @@
 		</dependency>
 
 		<!-- Testing JARs -->
-
 		<dependency>
 			<groupId>org.powermock</groupId>
 			<artifactId>powermock-module-junit4</artifactId>
@@ -165,14 +172,11 @@
 			<scope>compile</scope>
 			<version>1.6</version>
 		</dependency>
-
-
 	</dependencies>
 
 	<build>
 		<plugins>
 			<!-- Plugin required to build java classes from XSD using XJC -->
-
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>jaxb2-maven-plugin</artifactId>
@@ -223,74 +227,5 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<pluginManagement>
-			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings 
-					only. It has no influence on the Maven build itself. -->
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.codehaus.mojo
-										</groupId>
-										<artifactId>
-											build-helper-maven-plugin
-										</artifactId>
-										<versionRange>
-											[1.9.1,)
-										</versionRange>
-										<goals>
-											<goal>add-source</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore></ignore>
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
 	</build>
-
-	<profiles>
-		<profile>
-			<id>localServer</id>
-			<build>
-				<plugins>
-					<plugin>
-						<artifactId>maven-resources-plugin</artifactId>
-						<version>3.1.0</version>
-						<executions>
-							<execution>
-								<id>copy-resources</id>
-								<phase>install</phase>
-								<goals>
-									<goal>copy-resources</goal>
-								</goals>
-								<configuration>
-									<outputDirectory>${local.installPath}</outputDirectory>
-									<resources>
-										<resource>
-											<directory>${project.build.directory}</directory>
-											<include>${project.name}*.jar</include>
-											<exclude>*-bin.jar</exclude>
-										</resource>
-									</resources>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
 </project>
