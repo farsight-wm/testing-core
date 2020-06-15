@@ -61,7 +61,7 @@
 			<artifactId>testing-utils</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
-		
+
 		<!-- webMethods server JARs -->
 		<dependency>
 			<groupId>com.softwareag.webmethods</groupId>
@@ -176,6 +176,41 @@
 
 	<build>
 		<plugins>
+			<!-- plugin to build is package -->
+			<plugin>
+				<groupId>farsight-wm</groupId>
+				<artifactId>is-package-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>is-package</goal>
+						</goals>
+						<configuration>
+							<packages>
+								<package>
+									<name>FarsightWmTesting</name>
+									<jars>
+										<jar>
+											<id>farsight-wm:utils</id>
+										</jar>
+										<jar>
+											<id>farsight-wm:testing-utils</id>
+										</jar>
+										<jar>
+											<id>farsight-wm:testing-core</id>
+										</jar>
+										<jar>
+											<id>org.apache.commons:commons-jexl3</id>
+										</jar>
+									</jars>
+								</package>
+							</packages>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
 			<!-- Plugin required to build java classes from XSD using XJC -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
